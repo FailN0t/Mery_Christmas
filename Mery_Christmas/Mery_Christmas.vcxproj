@@ -134,9 +134,14 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Button.h" />
+    <ClInclude Include="FontSF.h" />
   </ItemGroup>
   <ItemGroup>
     <Font Include="BankGothic Md BT Medium.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="BACK.jpg" />
+    <Image Include="BACK2.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
