@@ -2,10 +2,25 @@
 //
 
 #include <iostream>
-
+#include <SFML/Graphics.hpp>
+using namespace sf;
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+	RenderWindow win(VideoMode(600, 800), "Calc");
+	Event event;
+	CircleShape cS(100);
+	int i = 20;
+	win.setFramerateLimit(30);
+	while (win.isOpen()) {
+		while (win.pollEvent(event))  // Цикл игровых событий: нажатие клавишь, перемещение мышки и другие.
+		{
+			if (event.type == Event::Closed) win.close(); // Закрыть окно
+		}
+		win.clear();
+		win.draw(cS);
+		win.display();
+	}
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
