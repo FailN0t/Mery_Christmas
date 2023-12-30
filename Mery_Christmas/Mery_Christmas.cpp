@@ -3,6 +3,7 @@
 
 #include "Button.h"
 #include "FontSF.h"
+#include "NEW_YEAR.h"
 int main()
 {
 	RenderWindow win(VideoMode(600, 800), "Calc");
@@ -14,6 +15,7 @@ int main()
 	int i = 20;
 	win.setFramerateLimit(30);
 	Butt butt(220, 400, 155, 50, Color::Cyan, "New Year");
+	NewYear newY;
 	FontSF font;
 	while (win.isOpen()) {
 		while (win.pollEvent(event))  // Цикл игровых событий: нажатие клавишь, перемещение мышки и другие.
@@ -26,7 +28,7 @@ int main()
 		}
 		win.clear();
 		if (b) {
-
+			newY.printNEW(win);
 		}
 		else {
 			font.printFONT(win);

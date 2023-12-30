@@ -2,6 +2,7 @@
 #include "Button.h"
 
 class FontSF {
+protected:
     Texture textureNEW;
     RectangleShape gamingBackground;
     RectangleShape gamingBackground2;
