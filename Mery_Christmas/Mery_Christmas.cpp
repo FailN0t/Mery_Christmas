@@ -1,10 +1,8 @@
 ﻿// Mery_Christmas.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
-#include <SFML/Graphics.hpp>
-using namespace sf;
-using namespace std;
+#include "Button.h"
+
 int main()
 {
 	RenderWindow win(VideoMode(600, 800), "Calc");
