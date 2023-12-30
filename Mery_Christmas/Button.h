@@ -55,12 +55,13 @@ public:
 		win.draw(butt);
 		win.draw(txt);
 	}
-	void mousePresBut(RenderWindow& win, Event& event) {
+	bool mousePresBut(RenderWindow& win, Event& event) {
 		if (event.type == Event::MouseButtonPressed) {
 			if (event.key.code == Mouse::Left) {
 				if (butt.getGlobalBounds().contains(Mouse::getPosition(win).x, Mouse::getPosition(win).y))
 				{
 					butt.setFillColor(color3);
+					return 1;
 				}
 
 			}
@@ -69,9 +70,11 @@ public:
 			if (butt.getGlobalBounds().contains(Mouse::getPosition(win).x, Mouse::getPosition(win).y))
 			{
 				butt.setFillColor(color2);
+				return 0;
 			}
 			else {
 				butt.setFillColor(color1);
+				return 0;
 			}
 		}
 	}

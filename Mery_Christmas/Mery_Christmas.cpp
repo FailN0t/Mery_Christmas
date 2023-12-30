@@ -7,6 +7,7 @@ int main()
 {
 	RenderWindow win(VideoMode(600, 800), "Calc");
 	Image icon;
+	bool b = 0;
 	if (!icon.loadFromFile("icon.png")) return 13;  // Отсутствует иконка приложения
 	win.setIcon(32, 32, icon.getPixelsPtr());
 	Event event;
@@ -18,11 +19,19 @@ int main()
 		while (win.pollEvent(event))  // Цикл игровых событий: нажатие клавишь, перемещение мышки и другие.
 		{
 			if (event.type == Event::Closed) win.close(); // Закрыть окно
-			butt.mousePresBut(win, event);
+			if(!b){
+				b = butt.mousePresBut(win, event);
+			}
+			
 		}
 		win.clear();
-		font.printFONT(win);
-		butt.printButt(win);
+		if (b) {
+
+		}
+		else {
+			font.printFONT(win);
+			butt.printButt(win);
+		}
 		
 		win.display();
 	}
