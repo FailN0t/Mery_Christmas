@@ -32,6 +32,9 @@
     <ClInclude Include="NEW_YEAR.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="Sne.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Font Include="BankGothic Md BT Medium.otf" />
