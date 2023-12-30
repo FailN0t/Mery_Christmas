@@ -2,14 +2,18 @@
 //
 
 #include "Button.h"
-
+#include "FontSF.h"
 int main()
 {
 	RenderWindow win(VideoMode(600, 800), "Calc");
+	Image icon;
+	if (!icon.loadFromFile("icon.png")) return 13;  // Отсутствует иконка приложения
+	win.setIcon(32, 32, icon.getPixelsPtr());
 	Event event;
 	int i = 20;
 	win.setFramerateLimit(30);
 	Butt butt(220, 400, 155, 50, Color::Cyan, "New Year");
+	FontSF font;
 	while (win.isOpen()) {
 		while (win.pollEvent(event))  // Цикл игровых событий: нажатие клавишь, перемещение мышки и другие.
 		{
@@ -17,7 +21,9 @@ int main()
 			butt.mousePresBut(win, event);
 		}
 		win.clear();
+		font.printFONT(win);
 		butt.printButt(win);
+		
 		win.display();
 	}
 }

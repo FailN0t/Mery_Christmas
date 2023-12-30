@@ -27,7 +27,7 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="FontSF.h">
-      <Filter>Файлы ресурсов</Filter>
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -38,6 +38,9 @@
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="BACK2.jpg">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="icon.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>

@@ -142,6 +142,7 @@
   <ItemGroup>
     <Image Include="BACK.jpg" />
     <Image Include="BACK2.jpg" />
+    <Image Include="icon.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
