@@ -21,7 +21,7 @@ public:
 		color1 = color;
 		butt.setFillColor(color1);
 		txt.setString(text);
-		txt.setPosition(x + 25, y + 15);
+		txt.setPosition(x + 25, y + 10);
 		txt.setFillColor(Color::White);
 		txt.setCharacterSize(20);
 		font.loadFromFile("BankGothic Md BT Medium.otf");

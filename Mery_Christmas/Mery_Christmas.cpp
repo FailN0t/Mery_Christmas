@@ -7,16 +7,17 @@ int main()
 {
 	RenderWindow win(VideoMode(600, 800), "Calc");
 	Event event;
-	CircleShape cS(100);
 	int i = 20;
 	win.setFramerateLimit(30);
+	Butt butt(220, 400, 155, 50, Color::Cyan, "New Year");
 	while (win.isOpen()) {
 		while (win.pollEvent(event))  // Цикл игровых событий: нажатие клавишь, перемещение мышки и другие.
 		{
 			if (event.type == Event::Closed) win.close(); // Закрыть окно
+			butt.mousePresBut(win, event);
 		}
 		win.clear();
-		win.draw(cS);
+		butt.printButt(win);
 		win.display();
 	}
 }
